@@ -128,7 +128,8 @@ body
     width: 85%;
     top: 289px;
     left: 150px;
-    overflow: scroll;
+    border-top: 4px solid #3fbbc0;
+
     
 }
 
@@ -151,7 +152,7 @@ body
 
 .main_boxes
 {
-    background-color: #fdfcfc;
+    background-color: #f6f0f0;
     height: 292px;
     display: flex;
 }
@@ -159,10 +160,16 @@ body
 .boxes{
    margin-top: 10px;
    height: 200px;
-   background-color: white;
+   background-color: rgb(255, 255, 255);
    margin-left: 50px;
    margin-right: 33px;
    margin-top: 50px;
+
+}
+
+.boxes h4 
+{
+    padding-left: 10px;
 
 }
 
@@ -170,8 +177,121 @@ body
 { 
     color: #3fbbc0;
     font-size: 42px;
-    padding-bottom: 10px;
-   
+    padding: 10px;
+
+}
+
+/* emergency section starts here  */
+
+.emergency
+{
+    background: #3fbbc0;
+    height: 250px;
+
+}
+
+.emergency h2 
+{
+
+    text-align: center;
+    margin-top: 75px;
+    font-size: 28px;
+    color: white;
+}
+.emergency p{
+    color: white;
+}
+
+
+.emergency_btn
+{
+    position: relative;
+    left: 672px;
+    background: #3fbbc0;
+    color: white;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.emergency_btn:hover{
+    background: white;
+    backface-visibility: visible;
+    color: #3fbbc0 ;
+}
+
+/* About us section statrts here  */
+
+.aboutus
+{
+    height: 800px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.aboutus_heading
+{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
 
 
 }
+
+.aboutus_content
+{
+    margin-bottom: 15px;
+    line-height: 30px;
+    margin-left: 10px;
+
+}
+
+.aboutus_division
+{
+    display: flex;
+    width: 100%;
+
+}
+.aboutus_division1
+{
+    width: 2500px;
+    margin-right: 20px;
+   
+}
+
+.aboutus_division2
+{
+   width: 50%;
+}
+.aboutus_img
+{
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+.list
+{
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 30px;
+
+
+}
+
+.list_icon
+{
+  color: #3fbbc0;
+  padding-right:5px ;
+  
+}
+
+
+
