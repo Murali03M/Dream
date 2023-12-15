@@ -122,15 +122,13 @@ body
 }
 
 .slider_content
-{  
+{
     position: relative;
     background: white;
-    width: 85%;
+    width: 92%;
     top: 289px;
-    left: 150px;
+    left: 63px;
     border-top: 4px solid #3fbbc0;
-
-    
 }
 
 .slider_content h1,p
@@ -160,15 +158,14 @@ body
 .boxes{
     margin-top: 10px;
     height: 200px;
-    width: 290px;
+    width: 271px;
     background-color: rgb(255, 255, 255);
-    margin-left: 39px;
-    margin-right: 33px;
+    margin-left: 64px;
+    margin-right: 18px;
     margin-top: 50px;
     position: relative;
     z-index: 1;
-    box-shadow: 0px 0px 5px 0px black
-
+    box-shadow: 0px 0px 5px 0px black;
 }
 
 
@@ -192,9 +189,15 @@ body
     transform: scaleY(1);
 }
 
+
+.boxes:hover {
+    color: white;
+}
+
 .boxes:hover .box_icons {
     color: white;
 }
+
 
 .box_content 
 {
@@ -326,7 +329,7 @@ body
 {
     max-width: 100%;
     height: auto;
-
+    margin-left: 13px;
 }
 
 .list
@@ -354,5 +357,107 @@ body
     font-weight: 600;
 }
 
+
+.testimonisl
+{
+    height: 700px;
+   
+    background-color: #f6f9fd;
+    
+}
+
+.testimonial_slider
+{
+    margin-left: 79px;
+    margin-top: 36px;
+    width: 90%;
+}
+
+.top_testimonial{
+
+   color: #aaaaaa;
+
+}
+
+.top_testimonial::after{
+    content: "";
+    height: 1px;
+    width: 120px;
+    display: inline-block;
+    background-color: #f38b74;
+    margin: 4px 10px;
+}
+
+.testimonisl h1{
+    font-size: 33px;
+    margin-top: 10px;
+    margin-bottom: 79px;
+}
+
+.box{
+    background-color: white;
+    height: 198px;
+    width: 47%;
+   box-shadow:  1px 1px 20px 0px rgba(0, 0, 0, 0.1)
+
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.box_contianer
+{
+    margin-top: 10px;
+    display: flex;
+
+}
+.box_contianer1{
+    margin-right: 5px;
+}
+
+.box_contianer2{
+    margin-left: 58px;
+}
+
+.box-img1{
+    position: absolute;
+    width: 90px;
+    border: 5px solid white;
+    left: 42px;
+    border-radius: 10px;
+
+}
+
+
+.box-img2{
+    position: absolute;
+    width: 90px;
+    border: 5px solid white;
+    left: 736px;
+    border-radius: 10px;
+
+
+}
+
+.quote-container {
+    display: inline;
+  
+}
+   .testimonisl p {
+    margin-left: 10px;
+   }
+.fa-quote-left,
+.fa-quote-right {
+    font-size: 24px;
+    color: #555;
+    display: inline-block;
+    
+    position: relative;
+  
+}
 
 
