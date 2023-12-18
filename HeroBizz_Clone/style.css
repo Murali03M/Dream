@@ -1,0 +1,311 @@
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px); /* adjust the value according to your needs */
+    }
+}
+
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+body 
+{
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent; 
+}
+
+section {
+    padding: 50px 0px;
+}
+
+/* header startes here  */
+.header{
+    padding: 15px ;
+    height: 60px;
+    background-color: white;
+}
+
+
+.header_content{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+
+.header_logo
+{
+   font-size: 16px;
+   font-weight: 100;
+   color: #485664;
+   font: sans-serif ;
+
+
+
+}
+
+.nav_links
+{
+
+    margin-top: 15px;
+
+ 
+    
+
+
+}
+.links{
+
+    display: flex;
+    align-items: center;
+   
+
+}
+
+.link{
+ 
+    padding: 3px 20px 5px 20px;
+}
+
+.link a {
+    text-decoration: none;
+    align-items: center;
+    font-size: 18px;
+    color: #3A4753B3;
+
+}
+
+.button
+{
+    border: 1px solid #0EA2BD;
+    padding: 8px 23px;
+    font-size: 18px;
+    background-color: #0EA2BD;
+    border-radius: 5px;
+    color: white;
+   
+}
+
+.button:hover {
+    color:  #0EA2BD;
+    background-color: #39494c;
+}
+
+/* header ends here */
+
+.home
+{
+    background: url(https://bootstrapmade.com/demo/templates/HeroBiz/assets/img/hero-bg.png) center;
+   
+    text-align: center;
+    
+}
+
+.home_image
+{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    margin-top: 70px;
+}
+
+.animation {
+
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    margin-bottom: 20px;
+
+}
+
+.home_container h2 
+{
+    margin-top: 30px;
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #485664;
+}
+
+.home_container h2::after
+{
+
+    content: "HeroBiz";
+    color: #0EA2BD;
+}
+.home_container p {
+
+    color: #485664;
+    letter-spacing: 3px;
+    margin-top: 20px;
+
+}
+
+.home_links
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+   
+}
+
+.home_button
+{
+    border: 1px solid #0EA2BD;
+    padding: 8px 23px;
+    font-size: 18px;
+    background-color: #0EA2BD;
+    border-radius: 5px;
+    color: white;
+}
+
+.home_button:hover{
+    
+        color: #0EA2BD;
+        background-color: #39494c;
+    
+}
+
+.home_watch 
+{
+    margin-left: 30px;
+    padding: 10px 23px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+
+}
+
+.circle_icon
+{
+    font-size: 25px;
+    padding-right: 10px 5px;
+    text-align: center;
+    color: #0EA2BD;
+
+
+}
+
+.home_watch_video {
+    margin-left: 10px;
+
+ 
+
+} 
+
+.home_watch_video:hover {
+   
+    color: #0EA2BD;
+    
+} 
+
+/* service section starts here */
+
+.service_contianer{
+
+
+}
+.service_header{
+    text-align: center;
+
+}
+.service_header h2 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #39494c;
+}
+
+.service_header p {
+
+    color: #485664;
+    letter-spacing: 3px;
+    margin-top: 20px;
+     margin-bottom: 30px;
+
+}
+
+.services_row1 
+{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-right: 70px;
+  
+}
+
+.service_item{
+
+   padding: 10px;
+
+}
+
+.service_image 
+{
+    height: auto;
+    width: 390px;
+    object-fit: contain;
+    border-radius: 6px;
+   
+
+}
+
+.service_details {
+    position: relative;
+    background: white;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    left: 45px;
+    top: -100px;
+    opacity: 0.9;
+
+
+
+}
+
+
+
+    .service_icon {
+        position: absolute;
+        background: red;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        height: 72px;
+        width: 72px;
+        border-radius: 50px;
+        
+    }
+    
+    
+
+  
+
+
+
+
+
+
+
+
