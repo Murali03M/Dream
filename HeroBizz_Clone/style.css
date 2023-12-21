@@ -4,11 +4,9 @@
         transform: translateY(10px);
     }
     100% {
-        transform: translateY(-10px); /* adjust the value according to your needs */
+        transform: translateY(-10px);
     }
 }
-
-
 
 *
 {
@@ -33,7 +31,6 @@ body
 
 
 
-/* header startes here  */
 .header{
     padding: 15px ;
     height: 60px;
@@ -239,8 +236,6 @@ body
     color: #0EA2BD;
     
 } 
-
-/* service section starts here */
 
 .service_contianer{
    
@@ -652,8 +647,8 @@ footer section starts here  */
     color: white;
     padding: 10px;
 }
-  
-  .footer1 {
+
+.footer1 {
   
     display: flex;
     justify-content: space-between;
