@@ -128,6 +128,16 @@ body
     background-color: #39494c;
 }
 
+.clickButton1{
+    display: none;
+    font-size: 25px;
+    margin-top: -2px;
+}
+.clickButton2{
+    display: none;
+    font-size: 25px;
+  
+}
 /* header ends here */
 
 .home
@@ -235,6 +245,8 @@ body
     color: #0EA2BD;
     
 } 
+
+/* Service section starts here */
 
 .service_contianer{
    
@@ -684,7 +696,575 @@ footer section starts here  */
     cursor: pointer;
 
   }
+
+  @media only screen and (min-width:1025px) and (max-width: 1200px) {
+
+    *
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+body 
+{
+    font-family: 'Inter', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent; 
+}
+
+      
+
+     
+.header{
+    padding: 15px ;
+    height: 60px;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+.service_details {
+ 
+    position: relative;
+    background: white;
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    left: 28px;
+    top: -187px;
+    opacity: 0.9;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+}
+
+.team_details {
+    position: relative;
+    background: white;
+    height: 123px;
+    width: 271px;
+    text-align: center;
+    left: 24px;
+    top: -69px;
+    opacity: 0.9;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.teams_icons1 {
+    display: none;
+    position: absolute;
+    top: 2320px;
+    left: 170px;
+    z-index: 2;
+    transition: display 0.5s ease-in;
+   
+
+}
+.teams_icons2{
+    display: none;
+    position: absolute;
+    top: 2320px;
+    left: 490px;
+    z-index: 2;
+    transition: display 0.3s;
+   
+
+}
+
+.teams_icons3 {
+    display: none;
+    position: absolute;
+    top: 2320px;
+    left: 800px;
+    z-index: 2;
+    transition: display 0.3s;
+   
+
+}
+
+.contact_detials{
+
+    width: 35%;
+    box-shadow: 0 0 10px black;
+    height: 350px;
+    margin: 10px;
+    overflow: hidden;
+
+}
+
+.contact_detials  h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
   
+ }
+ .contact_detials p
+ {
+     color: #485664;
+     margin-left: 20px;
+     margin-bottom: 10px;
+     margin-top: 5px;
+   
+     
+ 
+ }
+ 
+ .contact_detials h4 {
+    margin-left: 10px;
+    margin-top: 5px;
+    
+ }
+
+ .scroll-to-top {
+    background-color: #0EA2BD;
+    position: absolute;
+    margin-left: 1050px;
+    margin-top: -50px;
+    color: white;
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  
+
+
+  }
+
+  @media only screen and (min-width:769px) and (max-width: 1024px) {
+
+    *
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+body 
+{
+    font-family: 'Inter', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent; 
+}
+
+      
+
+     
+.header{
+    padding: 15px ;
+    height: 60px;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+.service_details {
+ 
+    position: relative;
+    background: white;
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    left: 28px;
+    top: -187px;
+    opacity: 0.9;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+}
+
+.team_details {
+    position: relative;
+    background: white;
+    height: 123px;
+    width: 271px;
+    text-align: center;
+    left: 24px;
+    top: -69px;
+    opacity: 0.9;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.teams_icons1 {
+    display: none;
+    position: absolute;
+    top: 2320px;
+    left: 170px;
+    z-index: 2;
+    transition: display 0.5s ease-in;
+   
+
+}
+.teams_icons2{
+    display: none;
+    position: absolute;
+    top: 2320px;
+    left: 490px;
+    z-index: 2;
+    transition: display 0.3s;
+   
+
+}
+
+.teams_icons3 {
+    display: none;
+    position: absolute;
+    top: 2320px;
+    left: 800px;
+    z-index: 2;
+    transition: display 0.3s;
+   
+
+}
+
+.contact_detials{
+
+    width: 35%;
+    box-shadow: 0 0 10px black;
+    height: 350px;
+    margin: 10px;
+    overflow: hidden;
+
+}
+
+.contact_detials  h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  
+ }
+ .contact_detials p
+ {
+     color: #485664;
+     margin-left: 20px;
+     margin-bottom: 10px;
+     margin-top: 5px;
+   
+     
+ 
+ }
+ 
+ .contact_detials h4 {
+    margin-left: 10px;
+    margin-top: 5px;
+    
+ }
+
+ .scroll-to-top {
+   
+    display: none;
+
+  }
+  
+
+
+  }
+
+
+  @media only screen and (min-width:320px) and (max-width: 480px) {
+
+    *
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+body 
+{
+    font-family: 'Inter', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent; 
+}
+
+      
+
+     
+.header{
+    padding: 15px ;
+    height: 60px;
+    background-color: white;
+    width: 100%;
+}
+
+.nav_links{
+     display: inline;
+     background-color: white;
+  
+    
+}
+
+.links {
+    display: inline-block;
+    position: fixed;
+    background-color:#3A4753;
+    height: 100vh;
+    width: 200px;
+    padding-top: 80px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+ 
+
+}
+
+
+
+.link a {
+ 
+    color:white;
+   
+}
+
+
+.button {
+    display: none;
+}
+
+.home_button
+{
+    border: 1px solid #0EA2BD;
+    padding: 7px 23px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #0EA2BD;
+    border-radius: 5px;
+    color: white;
+}
+.home_watch 
+{
+    margin-left: 20px;
+    padding: 10px 23px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+
+}
+.clickButton1 {
+    display: block;
+    
+}
+
+.clickButton2{
+    display: block;
+    position: absolute;
+    color: white;
+    margin-top: -58px;
+    margin-left: 10px;
+}
+
+
+
+/* home section starts here */
+.home_container h2 
+{
+    margin-top: 30px;
+    font-size: 30pxpx;
+    font-weight: 200;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #485664;
+}
+ 
+/* service section starts here */
+.services_row1 {
+    display: inline;
+}
+
+
+.service_item{
+
+  
+    height: 500px;
+    overflow: hidden;
+    margin-left: 20px;
+ 
+ }
+ 
+ .service_image 
+ {
+     height: auto;
+     width: 300px;
+     border-radius: 6px;
+     transition: transform 0.5s; 
+     cursor: pointer;
+ 
+ }
+.service_details {
+ 
+    position: relative;
+    background: white;
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    left: 28px;
+    top: -187px;
+    opacity: 0.9;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+}
+
+.service_icon {
+   
+    left: 42%;
+    
+    }
+
+    /* team section starts here */
+    .teams_row1 
+    {
+        display: inline;
+        
+       
+      
+    }
+.team_details {
+ 
+    width: 235px;
+    left: 70px;
+    top: -69px;
+   
+}
+
+.team_image 
+{
+    height: auto;
+    width: 300px;
+    align-items: center;
+    margin-left: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.teams_icons1 {
+       display: none;
+       top: 4241px;
+       left: 119px;
+     
+   
+
+}
+.teams_icons2{
+    display: none;
+    top: 4744px;
+    left: 119px;
+
+    
+   
+
+}
+
+.teams_icons3 {
+    display: none;
+    top: 5240px;
+    left: 119px;
+}
+
+/* contact us section */
+
+.contactdetails_from
+{
+    display: inline;
+}
+
+
+
+.contact_detials{
+
+    width: 90%;
+    box-shadow: 0 0 10px black;
+    height: 350px;
+    margin: 20px;
+    overflow: hidden;
+
+}
+
+.contact_detials  h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  
+ }
+ .contact_detials p
+ {
+     color: #485664;
+     margin-left: 20px;
+     margin-bottom: 10px;
+     margin-top: 5px;
+   
+     
+ 
+ }
+ 
+ .contact_detials h4 {
+    margin-left: 10px;
+    margin-top: 5px;
+    
+ }
+
+ 
+ .input_button
+ {
+    
+     padding: 8px 23px;
+     font-size: 18px;
+     background-color: #0EA2BD;
+     border-radius: 5px;
+     color: white;
+     margin-left: 30%;
+     margin-top: 20px;
+ 
+ }
+/* 
+ footer section */
+
+ .footer1 {
+    display: inline;
+    margin: 10px;
+ }
+
+ .social-icons {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+ .scroll-to-top {
+   
+    display: none;
+
+  }
+  
+
+
+  }
+
 
 
 
