@@ -7,18 +7,25 @@
 </head>
 <body>
 
-    <div>Select option to choose the country</div>
+    <div>Click the button</div>
 
-    <button onclick="Validatefunction()">Button</button>
-
-
-
+    <button onclick="ValidateFunction()">Button</button>
 
     <script>
-    function Validatefunction()  {
-   
-          console.log('called ');
-    }
+        function ValidateFunction() {
+            console.log('called ');
+
+            const paragraph = "hello welcome to tamilnadu";
+            let paragraphSplit = paragraph.split(" ");
+
+            for (let i = 0; i < paragraphSplit.length; i++) {
+                paragraphSplit[i] = paragraphSplit[i][0].toUpperCase() + paragraphSplit[i].slice(1);
+            }
+
+            console.log("before:",paragraph);
+
+            console.log('After:',paragraphSplit.join(' '));
+        }
     </script>
     
 </body>
