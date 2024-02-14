@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter the name" />
+        <label>How many Kids</label>
+           <select name="" id="kids" onchange="selectKids(event)">
+                <option value="">select option</option>
+                <option value="aaa">1</option>
+                <option value="bbb">2</option>
+                <option value="ccc">3</option>
+               </select>
+            <label style="display: none;" id="countryerror">Enter FirstName</label>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter Your Name"  id="kid1" class="kids" style="display: none;">
+        </div>
+        <div>
+            <input type="text" placeholder="Enter Your Name"  id="kid2" class="kids" style="display: none;">
+        </div>
+        <div>
+            <input type="text" placeholder="Enter Your Name"  id="kid3" class="kids" style="display: none;">
+        </div>
+        <div>
+            <input type="button" value="save" onclick="validateLoginForm()" id="button">
+        </div>
+        
+    </form>
+</body>
+</html>
+
+
+
+
+<script>
+function selectKids(event){
+    
+        var selectKids = event.target.value;
+
+
+console.log('selectKids',selectKids)
+
+var kid1 = document.getElementById('kid1')
+var kid2 = document.getElementById('kid2')
+var kid3 = document.getElementById('kid3')
+
+
+if(selectKids == 'aaa') {
+kid1.style='display:block';
+kid2.style='display:none';
+kid3.style='display:none';
+}
+if(selectKids == 'bbb') {
+kid1.style='display:block';
+kid2.style='display:block';
+kid3.style='display:none';
+}
+if(selectKids == 'ccc') {
+kid1.style='display:block';
+kid2.style='display:block';
+kid3.style='display:block';
+}
+    }
+  
+
+</script>
