@@ -123,6 +123,8 @@ function checkoutpage() {
                     <button onclick="proceedToPayment(${index}, ${item.quantity})" class="btn btn-primary">Proceed to payment</button>
                 </div>
             </div>`).join('');
+        
+        
 
         checkoutInfo.innerHTML = checkoutHtml;
     } else {
