@@ -1,6 +1,8 @@
 var items = JSON.parse(localStorage.getItem('items')) || [];
 var checkoutItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
 
+
+
 function calculatesalePrice() {
     const originalPrice = document.getElementById('original-price').value;
     const discount = document.getElementById('discount').value;
@@ -99,48 +101,48 @@ function showProductDetails() {
         }).join('');
 
        console.log(items);
-    
-        
-        
         
         productDetails.innerHTML = productHtml;
     }
 }
+showProductDetails();
+
 function checkoutpage() {
-    const checkoutItems = JSON.parse(localStorage.getItem('checkoutItems'));
-    console.log('checkoutItems:', checkoutItems);
-
-    const checkoutInfo = document.getElementById('checkout-details');
-    if (checkoutItems && checkoutItems.length > 0) {
-        const checkoutHtml = checkoutItems.map((item, index) => `
-            <div class="m-5 ">
-                <img src="${item.image.dataURL}" class="h-50 w-50 rounded float-start" alt="${item.image.fileName}">
-                <div class="card-body">
-                    <p>Product Id: ${index + 1}</p>
-                    <h2 class="card-title"><span class="fs-5">Product Name:</span> ${item.name}</h2>
-                    <p class="card-text"><span class="fs-5">Product Description:</span> ${item.description}</p>
-                    <p class="card-text">Total Price: $${item.totalPrice}</p>
-                    <button onclick="proceedToPayment(${index}, ${item.quantity})" class="btn btn-primary">Proceed to payment</button>
-                </div>
-            </div>`).join('');
-        
-        
-
-        checkoutInfo.innerHTML = checkoutHtml;
+    const checkoutDetails = document.getElementById('checkout-details'); 
+    let productHtml = "";
+   console.log(checkoutItems);
+    if (checkoutItems.length <= 0) {  
+        checkoutDetails.innerHTML = `<div>There is no item to display</div>`;
     } else {
-        checkoutInfo.innerHTML = `<div>There is not item available to pay, please select the item</div>`;
+        productHtml = checkoutItems.map(function (item, index) {
+            return `
+            <div class="row m-4 ">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="${item.image.dataURL}" class="img-fluid w-100 h-100 rounded float-start" alt="${item.image.fileName}">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="card-body">
+                        <p>Product Id: ${index + 1}</p>
+                        <h2 class="card-title"><span class="fs-5">Product Name:</span> ${item.name}</h2>
+                        <p class="card-text"><span class="fs-5">Product Description:</span> ${item.description}</p>
+                        <p class="card-text">Total Price: $${item.totalPrice}</p>
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+
+        checkoutDetails.innerHTML = productHtml;
     }
 }
 
-window.onload = function () {
-    showProductDetails();
-    checkoutpage(); 
-};
 
+checkoutpage();
 
 function addToCart(index) {
     const item = items.find((item, index1) => index1 === index);
 
+
+    console.log(item);
     const quantityInput = document.getElementById(`quantity${index}`);
     let quantityValue = parseInt(quantityInput.textContent);
 
@@ -155,22 +157,15 @@ function addToCart(index) {
         discount: item.discount,
         salesPrice: item.salesPrice,
         quantity: quantityValue,
-        totalPrice: totalPrice  // Add this line to include total price
+        totalPrice: totalPrice
     };
 
-    const existingItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
-    existingItems.push(selectedItem);
-    localStorage.setItem('checkoutItems', JSON.stringify(existingItems));
+    checkoutItems.push(selectedItem);
+    console.log(selectedItem);
+    localStorage.setItem('checkoutItems', JSON.stringify(checkoutItems));
+   
 }
 
-
-
-function proceedToPayment(index, quantityValue) {
-    const item = items.find((item, index1) => index1 === index);
-    const totalPrice = quantityValue * item.salesPrice;
-
-    console.log(`Proceeding to payment for ${item.name} with a total price of $${totalPrice}`);
-}
 
 
 function decreaseValue(index) {
@@ -184,6 +179,7 @@ function decreaseValue(index) {
         alert('At least one item should be there');
     }
 }
+
 
 function increaseValue(index) {
     const quantityInput = document.getElementById(`quantity${index}`);
