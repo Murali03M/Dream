@@ -116,7 +116,7 @@ function checkoutpage() {
     } else {
         productHtml = checkoutItems.map(function (item, index) {
             return `
-            <div class="row m-4 ">
+            <div class="row m-4 shadow-lg p-3">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <img src="${item.image.dataURL}" class="img-fluid w-100 h-100 rounded float-start" alt="${item.image.fileName}">
                 </div>
@@ -126,6 +126,7 @@ function checkoutpage() {
                         <h2 class="card-title"><span class="fs-5">Product Name:</span> ${item.name}</h2>
                         <p class="card-text"><span class="fs-5">Product Description:</span> ${item.description}</p>
                         <p class="card-text">Total Price: $${item.totalPrice}</p>
+                        <button type="button" class="btn btn-primary" onclick=makethePayment(${index})>Proceed to payment</button>
                     </div>
                 </div>
             </div>`;
@@ -141,8 +142,6 @@ checkoutpage();
 function addToCart(index) {
     const item = items.find((item, index1) => index1 === index);
 
-
-    console.log(item);
     const quantityInput = document.getElementById(`quantity${index}`);
     let quantityValue = parseInt(quantityInput.textContent);
 
@@ -161,8 +160,8 @@ function addToCart(index) {
     };
 
     checkoutItems.push(selectedItem);
-    console.log(selectedItem);
     localStorage.setItem('checkoutItems', JSON.stringify(checkoutItems));
+    alert('item added in the card')
    
 }
 
@@ -199,6 +198,83 @@ function increaseValue(index) {
   
   
 }
+
+
+function makethePayment(index) {
+
+   
+        window.location.href = `./card.html?index=${index}`;
+    
+}
+
+function confirmPayment() 
+{
+
+    const urlParams = new URLSearchParams(window.location.search);
+      const index = urlParams.get('index');
+
+
+        const cardNumber = document.getElementById('cardNumber').value;
+        const expiryDate = document.getElementById('expiryDate').value;
+        const cvv = document.getElementById('cvv').value;
+    
+       
+    if (cardNumber && expiryDate && cvv) {
+            
+           document.getElementById('cardForm').reset();
+        
+            window.location.href = `./success.html?index=${index}`;
+    
+            
+        } else {
+            window.location.href = `./failure.html?index=${index}`;
+        }
+    
+   
+}
+
+
+
+function successConfirm() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const index = urlParams.get('index');
+
+    const item = checkoutItems.find((item, index1) => index1 == index);
+
+    console.log(item);
+    const success = document.getElementById('success-details');
+
+    const successHtml = `you have paid the amount of $${item.totalPrice}`;
+
+    success.innerHTML = successHtml;
+
+    setTimeout(() => {
+        window.location.href = './productInfo.html';
+    }, 5000);
+
+}
+
+function failureConfirm() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const index = urlParams.get('index');
+
+    // const item = checkoutItems.find((item, index1) => index1 == index);
+
+    // console.log(item);
+    // const success = document.getElementById('failure-details');
+
+    // const successHtml = `you have paid the amount of $${item.totalPrice}`;
+
+    // success.innerHTML = successHtml;
+
+    setTimeout(() => {
+        window.location.href = `./card.html?index=${index}`;
+    }, 3000);
+
+}
+
+
+
 
 
 

@@ -31,14 +31,24 @@
             </div>
         </nav>
     </section>
- 
-    <section class="productInfo-page bg-image"
-       style="background-image: url('https://t3.ftcdn.net/jpg/01/17/33/22/240_F_117332203_ekwDZkViF6M3itApEFRIH4844XjJ7zEb.jpg');background-repeat: no-repeat;height: 100vh;background-size: cover;z-index: 0;" >
-        <h1 class="text-center p-4 text-light">Welcome to Ecart</h1>
-        <p class="text-center d-flex justify-content-center mx-auto w-75 text-light fs-3 z-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit est vero deserunt dolor saepe rem sunt blanditiis totam alias maxime accusamus libero optio veritatis ipsam, similique velit, error accusantium. Accusantium illum quis obcaecati ipsam libero dolores ducimus quibusdam consequatur nihil? Perferendis ea distinctio possimus magnam rem nostrum aliquid dignissimos? Et.</p>
-        <div class="d-flex flex-row justify-content-center gap-5">
-            <button type="button" class="btn btn-primary p-3">Add products</button>
-            <button type="button" class="btn btn-primary">Buy products</button>
+    <section class="card-page container border mt-5 p-3">
+        <h1 class="text-center">Enter the Card Details</h1>
+        <div id="card-details" class="w-100">
+            <form id="cardForm">
+                <div class="mb-3">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" required>
+                </div>
+                <div class="mb-3">
+                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cvv" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="confirmPayment()">Confirm Payment</button>
+            </form>
         </div>
     </section>
 
