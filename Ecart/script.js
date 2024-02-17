@@ -54,6 +54,8 @@ function submitHandler() {
 
             removeValues();
             showProductDetails(); 
+            alert('item added.')
+
         };
 
         reader.readAsDataURL(imageFile);
