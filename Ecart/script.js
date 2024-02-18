@@ -168,7 +168,6 @@ function addToCart(index) {
 }
 
 
-
 function decreaseValue(index) {
     const quantityInput = document.getElementById(`quantity${index}`);
     let quantityValue = parseInt(quantityInput.textContent);
