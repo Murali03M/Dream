@@ -1,14 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form onsubmit="validate()">
-        <label>Enter the name</label>
-        <input type="text"/>
-    </form>
-</body>
-</html>
+<script>
+    var totalData = JSON.parse(localStorage.getItem('formdata'))||[]
+
+    let formdata = {
+        ProductName: '',
+        productDescription: '',
+        productprice: '',
+        productDiscount: '',
+        DiscountPrice: '',
+        saleprice: '',
+        imageURL: '', 
+    };
+
+    function validateLoginForm() {
+        let isvalid = true;
+
+        for (const key in formdata) {
+            if (formdata.hasOwnProperty(key) && !formdata[key]) {
+                isvalid = false;
+                break;
+            }
+        }
+
+        if (!isvalid) {
+            totalData.push(formdata)
+            localStorage.setItem("formdata", JSON.stringify(totalData));
+        }
+    }
+
+    function handleChange(event) {
+        const id = event.target.id;
+        const value = event.target.value;
+
+        if (id === 'productimg') {
+            loadFile(event);
+        } 
+        else {
+            formdata[id] = value;
+        }
+
+        let productprice = parseFloat(document.getElementById('productprice').value);
+        let DiscountPrice = parseFloat(document.getElementById('DiscountPrice').value);
+        let discountType = document.getElementById('productDiscount').value;
+        let saleprice ;
+
+        if (discountType === '%') {
+            saleprice = productprice - (productprice * (DiscountPrice / 100));
+        } else if (discountType === 'flat') {
+            saleprice = productprice - DiscountPrice;
+        } else {
+            saleprice = productprice;
+        }
+        
+        document.getElementById('saleprice').value = saleprice.toFixed(2);
+    }
+
+    var loadFile = function (event) {
+        let imageInfo = null;
+        let imageFile = null;
+        let imageInput = document.getElementById('productimg');
+
+        if (imageInput.files.length > 0) {
+            imageFile = imageInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                imageInfo = {
+                    fileName: imageFile.name,
+                    dataURL: e.target.result
+                };
+
+                formdata.imageURL = imageInfo.dataURL;
+
+                document.getElementById('output').src = imageInfo.dataURL;
+
+                document.getElementById('output').onload = function () {
+                    URL.revokeObjectURL(imageInfo.dataURL);
+                };
+            };
+
+            reader.readAsDataURL(imageFile);
+        }
+    }
+</script>
