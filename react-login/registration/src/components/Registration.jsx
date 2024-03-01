@@ -77,6 +77,9 @@ const Registration = () => {
       }
         
   };
+    
+    
+    
 
   return (
     <div className='registration'>
