@@ -20,6 +20,8 @@ const Counter = () => {
        counter >=1 ? setCounter((c)=>c-1):alert('negative values are not allowed');
 
     }
+
+    
   return (
       <div>
           <Card style={{ width: '18rem', color:'black'}}>
