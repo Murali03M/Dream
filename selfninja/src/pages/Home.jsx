@@ -6,11 +6,11 @@ const Home = () => {
     <div className='bg-zinc-900 h-screen flex flex-col justify-center items-center'>
       <div className='flex justify-between w-full p-10'>
         {/* Left Section */}
-        <div className='md:flex flex-col justify-center text-center ml-40 block'>
+        <div className='md:flex flex-col justify-center text-center md:ml-40 ml-0 block'>
           <img className="opacity-25 " src="https://selfmade.ninja/assets/icons/curly-braces.png" alt="curly-braces" width={'70px'} height={'50px'} />
           <img className="opacity-25 absolute top-96 left-9" src="https://selfmade.ninja/assets/icons/html-tag.png" alt="curly-braces" width={'70px'} height={'50px'} />
           <img className="opacity-25 absolute bottom-1/3  left-1/3" src="https://selfmade.ninja/assets/icons/html-tag.png" alt="curly-braces" width={'70px'} height={'50px'} />
-          <div className='text-white text-4xl mb-4 pl-10'>
+          <div className='text-white text-4xl mb-4 pl-10 '>
             <span className='mb-4 block'>Master</span>
             <span className='bg-orange-500 text-zinc-900 px-2 mb-4 block'>THE ART OF TECH</span>
             <span className='mb-4 block'>Be A</span>

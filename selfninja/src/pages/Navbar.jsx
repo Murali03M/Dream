@@ -31,7 +31,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start mt-3">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch md:justify-start mt-3">
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
