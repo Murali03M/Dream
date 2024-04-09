@@ -1,0 +1,71 @@
+/* App.css code */
+
+.side-image {
+  position: absolute;
+  width: 100px; 
+  height: 100px;
+  animation: moveUpDown 2s infinite alternate;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.selfmade-ninja {
+    position: relative;
+    background: linear-gradient(to right top, #F47923, #9D3CFF);
+    padding: 30px;
+    width: 450px !important;
+    max-height: 450px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+}
+
+.explore {
+  background:linear-gradient(to right, #F47923, #9D3CFF);;
+}
+
+@media (max-width: 768px) {
+  .selfmade-ninja {
+    width: 300px !important;
+    max-height: 300px;
+  }
+
+  .side-image {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    display: none;
+  }
+}
+
+
