@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
 const User = require('../model/userModel.js');
 
 
-
-
 router.post('/adduser', async (req, res) => {
+
     const { email, password, firstName, lastName, phone } = req.body;
-   console.log(req.body);
+
+  
     try {
         const existingUser = await User.find({ email:email });
      console.log(existingUser);
@@ -22,12 +23,13 @@ router.post('/adduser', async (req, res) => {
             password:password,
             phone:phone
         });
-        console.log(user);
+        const userId = user._id;
+       const token =  jwt.sign({userId}, process.env.TOKEN_SECRET)
         return res.json({
             message: "User created successfully",
-            user
+            token: token
         });
-
+     
     } catch (error) {
         console.log(error);
         return res.status(500).json({ error: "Internal server error" });
@@ -46,10 +48,11 @@ router.post('/signin', async (req, res) => {
         if (!user || user.password !== password) {
             return res.json({ message: "Invalid email or password" });
         }
-
+        const userId = user._id;
+        const token =  jwt.sign({userId}, process.env.TOKEN_SECRET)
         return res.json({
             message: "User logged in successfully",
-            user: user
+            token: token
         });
     } catch (error) {
         console.error('Error:', error);
