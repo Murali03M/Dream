@@ -13,7 +13,6 @@ const Home = () => {
         const response = await axios.get(`${BACKEND_URL}/users/totals`); 
         setUserCount(response.data.userCount);
         setTodoCount(response.data.todoCount);
-        console.log(userCount);
       } catch (error) {
         console.error('Error fetching totals:', error);
       }
