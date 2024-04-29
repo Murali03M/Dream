@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BACKEND_URL } from '../../config'
 import { Link, useNavigate } from 'react-router-dom';
-const Login = () => {
+const Login = ({ setAuthenticated }) => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
@@ -46,6 +46,7 @@ const Login = () => {
                 })
                 
                 localStorage.setItem('token', response.data.token);
+                setAuthenticated(true);
                 navigate('/welcome');
 
            } catch (error) {

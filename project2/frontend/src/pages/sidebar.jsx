@@ -9,45 +9,49 @@ const Sidebar = () => {
     };
 
     return (
-        <div className={`h-screen bg-gray-800 text-white ${isOpen ? 'w-64' : 'w-12'}`}>
+        <div className={`h-screen bg-gray-800 text-white ${isOpen ? 'w-64' : 'w-12'} fixed` }>
             <nav className="mt-2">
                 <ul>
             <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
              
                         <button onClick={toggleSidebar} className="mr-2 focus:outline-none flex">
                             {isOpen ? <LeftIcon /> : <RightIcon />}
-                            {isOpen&&<Link to='./' className="ml-2">Menu</Link>}
+                            {isOpen&&<Link className="ml-2">Menu</Link>}
                         </button>
                     </li>
                     {isOpen ? (
                         <>
-                            <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
-                                <HomeIcon />
-                                <Link to='./home' className="ml-2">Home</Link>
+                            <li className="p-4 hover:bg-gray-600 cursor-pointer">
+                               <Link to={'/home'} className='flex items-center'>
+                                 <HomeIcon />
+                                <div className="ml-2">Home</div>
+                                </Link>
+                               
                             </li>
-                            <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
+                            <li className="p-4 hover:bg-gray-600 cursor-pointer ">
+                                <Link to={'/addtodo'} className='flex items-center'>
                                 <AddIcon />
-                                <Link to='./add' className="ml-2">Add People</Link>
+                                <div className="ml-2">Add Todo</div>
+                                </Link>  
                             </li>
-                <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
-                             <ContactIcon />
-                                <Link to='./contact' className="ml-2">Show people</Link>
+                           <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
+                           <Link to={'/showtodo'} className='flex items-center'>
+                                 <ContactIcon />
+                                <div className="ml-2">Show Todo</div>
+                             </Link>
                            </li>
                         </>
                     ):(
                       <>
                           <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
-                            <Link to='./add'> <HomeIcon /></Link>     
+                            <Link to={'/home'}> <HomeIcon /></Link>     
                           </li>
                           <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
-                            <Link><AddIcon /></Link>
+                            <Link to={'/addtodo'}><AddIcon /></Link>
                         </li>
                           <li className="p-4 hover:bg-gray-600 cursor-pointer flex items-center">
-                            <Link to='./contact'><ContactIcon /></Link>
-                           </li>
-                  
-                  
-                        
+                            <Link to={'/contact'}><ContactIcon /></Link>
+                           </li> 
                       </>
                   )}
                 </ul>

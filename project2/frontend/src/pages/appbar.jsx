@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Button from '../components/button';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Appbar = () => {
-  const navigate = useNavigate()
-  const [authenticated, setAuthenticated] = useState(false);
-
-
-  const checkAuthentication = () => {
-    const token = localStorage.getItem('token');
-    setAuthenticated(!!token);
-  };
-
-  useEffect(() => {
-    checkAuthentication();
-  }, []); 
+const Appbar = ({ authenticated, onLogout }) => {
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/')
+    onLogout(); 
+    navigate('/');
   };
 
   return (

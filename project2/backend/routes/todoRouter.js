@@ -37,6 +37,30 @@ router.get('/', authMiddleware, async (req, res) => {
     }
 });
 
+router.get('/:id', authMiddleware, async (req, res) => {
+    try {
+        const { id } = req.params;
+    
+        const userId = req.userId; 
+        
+        const todo = await Todo.findById(
+            {
+               _id:id
+           }
+        );
+
+        if (!todo) {
+            return res.status(404).json({ error: "Todo not found" });
+        }
+     return res.json(todo);
+    } catch (error) {
+        console.error('Error:', error);
+        return res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+
+
 router.put('/:id', authMiddleware, async (req, res) => {
     try {
         const { id } = req.params;
@@ -60,7 +84,7 @@ router.put('/:id', authMiddleware, async (req, res) => {
     }
 });
 
-// Delete a todo
+
 router.delete('/:id', authMiddleware, async (req, res) => {
     try {
         const { id } = req.params;
