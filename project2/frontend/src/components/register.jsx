@@ -84,7 +84,6 @@ const Register = () => {
                     phone: formData.phone
                 });
                 await toast(response.data.message)
-                localStorage.setItem('token', response.data.token);
                  navigate('/login');
             } catch (error) {
                 // Handle error, if required
