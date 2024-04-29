@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BACKEND_URL } from '../../config';
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/v1/users/totals'); 
+        const response = await axios.get(`${BACKEND_URL}/users/totals`); 
         setUserCount(response.data.userCount);
         setTodoCount(response.data.todoCount);
         console.log(userCount);
