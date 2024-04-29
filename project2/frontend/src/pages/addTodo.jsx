@@ -3,6 +3,7 @@ import Button from '../components/button';
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BACKEND_URL } from '../../config';
 
 const AddTodo = () => {
   const [title, setTitle] = useState('');
@@ -35,7 +36,7 @@ const AddTodo = () => {
    
       try {
            
-          const response = await axios.post("http://localhost:8080/api/v1/todos/", {
+          const response = await axios.post(`${BACKEND_URL}/todos/`, {
               title: title,
               description:description
           }, {
