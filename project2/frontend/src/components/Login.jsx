@@ -47,7 +47,7 @@ const Login = ({ setAuthenticated }) => {
                 
                 localStorage.setItem('token', response.data.token);
                 setAuthenticated(true);
-                navigate('/welcome');
+                navigate('/home');
 
            } catch (error) {
                toast(error)

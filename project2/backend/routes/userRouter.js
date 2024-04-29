@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const User = require('../model/userModel.js');
-
-
+const Todo = require('../model/todoModel.js');
 router.post('/adduser', async (req, res) => {
 
     const { email, password, firstName, lastName, phone } = req.body;
@@ -36,6 +35,15 @@ router.post('/adduser', async (req, res) => {
     }
 });
 
+router.get('/totals', async (req, res) => {
+    try {
+      const userCount = await User.countDocuments();
+      const todoCount = await Todo.countDocuments();
+      res.json({ userCount, todoCount });
+    } catch (error) {
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
 
 router.post('/signin', async (req, res) => {
     const { email, password } = req.body;
