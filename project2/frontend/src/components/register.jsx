@@ -85,7 +85,7 @@ const Register = () => {
                 });
                 await toast(response.data.message)
                 localStorage.setItem('token', response.data.token);
-                 navigate('/home');
+                 navigate('/login');
             } catch (error) {
                 // Handle error, if required
                 console.error('Error occurred during registration:', error);
