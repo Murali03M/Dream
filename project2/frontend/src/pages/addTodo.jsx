@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Button from '../components/button';
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
@@ -36,7 +36,7 @@ const AddTodo = () => {
    
       try {
            
-          const response = await axios.post(`${BACKEND_URL}/todos/`, {
+          const response = await axios.post(`${BACKEND_URL}/todos`, {
               title: title,
               description:description
           }, {
