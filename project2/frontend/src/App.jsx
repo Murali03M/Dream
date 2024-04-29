@@ -34,7 +34,7 @@ function App() {
             <div className='flex'>
            {authenticated && <Sidebar />}
             <Routes>
-              <Route path="/" element={authenticated ?  <Home/>:<Welcome />} />
+              <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
               <Route path="/register" element={<Register />} />
               <Route path="/home" element={<Home />} />  
