@@ -37,7 +37,8 @@ function App() {
                {!authenticated &&<Route path="/" element={<Welcome />}/> } 
               <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/home" element={<Home />} />  
+              <Route path="/home" element={<Home />} /> 
+              <Route path="/" element={<Home />} />  
               <Route path="/addtodo" element={<AddTodo />} />  
               <Route path="/showtodo" element={<ShowTodo />} />  
               <Route path="/updateTodo/:id" element={<UpdateTodo />} />  
