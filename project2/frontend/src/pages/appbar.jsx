@@ -13,7 +13,7 @@ const Appbar = ({ authenticated, onLogout }) => {
   return (
     <div className='w-full h-14 bg-slate-50 border-b'>
       <div className='flex justify-between align-center bg-slate-50 p-2'>
-        <div className='p-2 text-xl'>Panel</div>
+       <Link to={'/home'}><div className='p-2 text-xl'>Panel</div></Link> 
         <div className='flex flex-col justify-center'>
           {authenticated ? (
             <Button className='h-10 w-10 rounded-full bg-slate-600' name='Logout' onClick={handleLogout} />
